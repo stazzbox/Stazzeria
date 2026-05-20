@@ -1,0 +1,489 @@
+
+Then paste THIS:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+
+  <title>
+    Stazzerian Conflict Archives | Stazzeria
+  </title>
+
+  <meta
+    name="description"
+    content="Official archival conflict records documenting major social-political conflicts, institutional disputes, alignments, retaliations, and peace accords throughout Stazzerian history."
+  />
+
+  <meta
+    name="keywords"
+    content="Stazzeria conflicts, Zits Conflict, Stazzerian archives, Stazzerian history, Stazzboi, Stazzerian timeline, Stazzation Era"
+  />
+
+  <link rel="icon" href="/assets/logos/STZTRITON.PNG" />
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      background:#050505;
+      color:white;
+      font-family:Arial, Helvetica, sans-serif;
+      overflow-x:hidden;
+    }
+
+    a{
+      text-decoration:none;
+      color:inherit;
+    }
+
+    :root{
+      --gold:#d4af37;
+      --border:rgba(255,255,255,0.08);
+    }
+
+    /* NAV */
+
+    nav{
+      width:100%;
+      padding:22px 6%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      border-bottom:1px solid var(--border);
+      background:rgba(0,0,0,0.82);
+      backdrop-filter:blur(10px);
+      position:sticky;
+      top:0;
+      z-index:999;
+    }
+
+    .nav-left{
+      display:flex;
+      align-items:center;
+      gap:14px;
+    }
+
+    .nav-left img{
+      width:46px;
+    }
+
+    .nav-links{
+      display:flex;
+      gap:28px;
+    }
+
+    .nav-links a:hover{
+      color:var(--gold);
+    }
+
+    /* HERO */
+
+    .hero{
+      padding:120px 6% 90px;
+      position:relative;
+    }
+
+    .hero::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:
+        linear-gradient(
+          to bottom,
+          rgba(0,0,0,0.9),
+          rgba(0,0,0,0.96)
+        ),
+        url("/assets/images/symbolism/StazzerianFlag.png");
+      background-size:cover;
+      background-position:center;
+      opacity:0.18;
+    }
+
+    .hero-content{
+      position:relative;
+      z-index:2;
+      max-width:900px;
+    }
+
+    .hero-subtitle{
+      color:var(--gold);
+      letter-spacing:3px;
+      text-transform:uppercase;
+      margin-bottom:18px;
+      font-size:0.85rem;
+    }
+
+    .hero h1{
+      font-size:clamp(3rem,7vw,5.2rem);
+      margin-bottom:24px;
+      line-height:1;
+    }
+
+    .hero p{
+      color:#c1c1c1;
+      line-height:1.9;
+      max-width:780px;
+    }
+
+    /* SECTIONS */
+
+    section{
+      padding:90px 6%;
+    }
+
+    .section-title{
+      font-size:2.6rem;
+      margin-bottom:20px;
+    }
+
+    .gold{
+      color:var(--gold);
+    }
+
+    .section-description{
+      color:#bdbdbd;
+      line-height:1.8;
+      max-width:900px;
+      margin-bottom:50px;
+    }
+
+    /* CONFLICT ENTRY */
+
+    .conflict-entry{
+      background:#0d0d0d;
+      border:1px solid var(--border);
+      border-radius:22px;
+      padding:40px;
+      margin-bottom:40px;
+    }
+
+    .conflict-classification{
+      color:var(--gold);
+      letter-spacing:2px;
+      text-transform:uppercase;
+      font-size:0.8rem;
+      margin-bottom:14px;
+    }
+
+    .conflict-entry h3{
+      font-size:2.2rem;
+      margin-bottom:22px;
+    }
+
+    .conflict-entry p{
+      color:#bcbcbc;
+      line-height:1.9;
+      margin-bottom:18px;
+    }
+
+    /* SUBSECTIONS */
+
+    .subsection-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:22px;
+      margin-top:35px;
+    }
+
+    .sub-card{
+      background:#121212;
+      border:1px solid var(--border);
+      border-radius:16px;
+      padding:24px;
+    }
+
+    .sub-card h4{
+      color:var(--gold);
+      margin-bottom:12px;
+    }
+
+    .sub-card p{
+      color:#bdbdbd;
+      line-height:1.7;
+      font-size:0.95rem;
+    }
+
+    /* STATUS */
+
+    .status-box{
+      margin-top:25px;
+      padding:18px;
+      border-left:4px solid var(--gold);
+      background:rgba(255,255,255,0.03);
+      border-radius:10px;
+    }
+
+    .status-box strong{
+      color:var(--gold);
+    }
+
+    /* NOTE */
+
+    .stazzex-note{
+      margin-top:70px;
+      background:rgba(255,255,255,0.03);
+      border-left:4px solid var(--gold);
+      padding:30px;
+      border-radius:14px;
+    }
+
+    .stazzex-note h4{
+      color:var(--gold);
+      margin-bottom:16px;
+      letter-spacing:2px;
+    }
+
+    .stazzex-note p{
+      color:#d0d0d0;
+      line-height:1.9;
+    }
+
+    /* FOOTER */
+
+    footer{
+      padding:50px 6%;
+      border-top:1px solid var(--border);
+      text-align:center;
+      color:#9d9d9d;
+    }
+
+    @media(max-width:900px){
+
+      .nav-links{
+        display:none;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <!-- NAV -->
+
+  <nav>
+
+    <div class="nav-left">
+
+      <img
+        src="/assets/logos/STZTRITON.PNG"
+        alt="Stazzerian Triton Logo"
+      />
+
+      <strong>
+        Conflict Archives
+      </strong>
+
+    </div>
+
+    <div class="nav-links">
+
+      <a href="/">
+        Home
+      </a>
+
+      <a href="/department-of-stazz/">
+        Department of Stazz
+      </a>
+
+      <a href="/history/">
+        History
+      </a>
+
+      <a href="/timeline/">
+        Timeline
+      </a>
+
+    </div>
+
+  </nav>
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <div class="hero-content">
+
+      <div class="hero-subtitle">
+        Official Archival Conflict Records
+      </div>
+
+      <h1>
+        Stazzerian <span class="gold">Conflict Archives</span>
+      </h1>
+
+      <p>
+        The Stazzerian Conflict Archives preserve institutional records documenting major social-political conflicts, alignments, retaliatory periods, tensions, resolutions, and peace accords throughout the development of the Stazz Universe ecosystem.
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- CONFLICT ENTRIES -->
+
+  <section>
+
+    <h2 class="section-title">
+      Archived <span class="gold">Entries</span>
+    </h2>
+
+    <p class="section-description">
+      Official archival systems maintain preserved records documenting major institutional confrontations and historically significant disputes associated with Stazzerian development and expansion.
+    </p>
+
+    <!-- ZITS CONFLICT -->
+
+    <div class="conflict-entry">
+
+      <div class="conflict-classification">
+        Social-Political Conflict
+      </div>
+
+      <h3>
+        The Zits Conflict
+      </h3>
+
+      <p>
+        The Zits Conflict is formally classified within archival systems as a historically significant social-political conflict involving retaliatory periods, alignments, institutional tensions, symbolic escalation, and eventual peace accord resolution during the Stazzation Era.
+      </p>
+
+      <p>
+        Although internally viewed as hostility by involved parties, external archival classifications preserve the conflict as a structured social challenge construct associated with broader institutional and interpersonal tensions during periods of Stazzerian expansion.
+      </p>
+
+      <!-- SUBSECTIONS -->
+
+      <div class="subsection-grid">
+
+        <div class="sub-card">
+
+          <h4>
+            Origins
+          </h4>
+
+          <p>
+            Initial tensions and conditions contributing to conflict emergence and alignment formation.
+          </p>
+
+        </div>
+
+        <div class="sub-card">
+
+          <h4>
+            First Retaliation
+          </h4>
+
+          <p>
+            Early responsive escalation periods associated with developing hostilities and symbolic confrontation.
+          </p>
+
+        </div>
+
+        <div class="sub-card">
+
+          <h4>
+            Military Alignment
+          </h4>
+
+          <p>
+            Strategic positioning, alliance development, and organizational support structures associated with the conflict.
+          </p>
+
+        </div>
+
+        <div class="sub-card">
+
+          <h4>
+            Broken Truce
+          </h4>
+
+          <p>
+            Collapse of temporary stabilization efforts leading to renewed tensions and escalation.
+          </p>
+
+        </div>
+
+        <div class="sub-card">
+
+          <h4>
+            Peace Agreement
+          </h4>
+
+          <p>
+            Institutional de-escalation efforts resulting in formalized peace accord recognition.
+          </p>
+
+        </div>
+
+        <div class="sub-card">
+
+          <h4>
+            Historical Legacy
+          </h4>
+
+          <p>
+            Long-term symbolic and institutional impact associated with the preserved conflict record.
+          </p>
+
+        </div>
+
+      </div>
+
+      <!-- STATUS -->
+
+      <div class="status-box">
+
+        <strong>
+          Current Status:
+        </strong>
+
+        Resolved / Peace Accord Active
+
+      </div>
+
+    </div>
+
+    <!-- NOTE -->
+
+    <div class="stazzex-note">
+
+      <h4>
+        STAZZEX NOTE
+      </h4>
+
+      <p>
+        Official conflict records are preserved within STAZZEX archival systems to maintain institutional continuity and historical documentation regarding major Stazzerian confrontations, retaliatory periods, social-political disputes, and resolution agreements.
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <p>
+      © Stazzerian Conflict Archives
+    </p>
+
+  </footer>
+
+</body>
+
+</html>
