@@ -1,1 +1,388 @@
-ph
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>President of Stazzeria | Stazzeria Wiki</title>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      background:#050505;
+      color:#f5f5f5;
+      font-family:Arial, Helvetica, sans-serif;
+      line-height:1.7;
+      overflow-x:hidden;
+    }
+
+    body::before{
+      content:"";
+      position:fixed;
+      width:900px;
+      height:900px;
+      background:radial-gradient(circle, rgba(255,215,0,0.12) 0%, transparent 70%);
+      top:-350px;
+      right:-250px;
+      z-index:-1;
+    }
+
+    .container{
+      width:92%;
+      max-width:1400px;
+      margin:auto;
+      padding:50px 0 80px 0;
+    }
+
+    .wiki-layout{
+      display:grid;
+      grid-template-columns:340px 1fr;
+      gap:40px;
+      align-items:start;
+    }
+
+    .infobox{
+      background:#0a0a0a;
+      border:1px solid rgba(255,215,0,0.18);
+      border-radius:22px;
+      overflow:hidden;
+      position:sticky;
+      top:30px;
+      box-shadow:0 0 30px rgba(255,215,0,0.08);
+    }
+
+    .infobox-header{
+      background:#ffd700;
+      color:#050505;
+      text-align:center;
+      padding:18px;
+      font-size:1.4rem;
+      font-weight:bold;
+      letter-spacing:1px;
+      text-transform:uppercase;
+    }
+
+    .profile-image{
+      width:100%;
+      height:auto;
+      display:block;
+      border-bottom:1px solid rgba(255,215,0,0.18);
+    }
+
+    .info-section{
+      padding:25px;
+    }
+
+    .info-item{
+      margin-bottom:18px;
+    }
+
+    .info-label{
+      color:#ffd700;
+      font-size:0.9rem;
+      text-transform:uppercase;
+      letter-spacing:1px;
+      margin-bottom:4px;
+      font-weight:bold;
+    }
+
+    .info-value{
+      color:#d6d6d6;
+      font-size:1rem;
+    }
+
+    .main-content{
+      background:rgba(255,255,255,0.03);
+      border:1px solid rgba(255,215,0,0.14);
+      border-radius:24px;
+      padding:50px;
+      backdrop-filter:blur(8px);
+      box-shadow:0 0 25px rgba(255,215,0,0.06);
+    }
+
+    .page-title{
+      font-size:4rem;
+      color:#ffd700;
+      text-transform:uppercase;
+      letter-spacing:4px;
+      margin-bottom:10px;
+    }
+
+    .subtitle{
+      color:#cfcfcf;
+      font-size:1.2rem;
+      margin-bottom:35px;
+    }
+
+    .lead{
+      font-size:1.08rem;
+      color:#d6d6d6;
+      margin-bottom:35px;
+    }
+
+    .section{
+      margin-top:50px;
+    }
+
+    .section h2{
+      color:#ffd700;
+      font-size:1.7rem;
+      margin-bottom:18px;
+      border-bottom:1px solid rgba(255,215,0,0.2);
+      padding-bottom:10px;
+      text-transform:uppercase;
+      letter-spacing:2px;
+    }
+
+    .section p{
+      color:#d6d6d6;
+      margin-bottom:18px;
+    }
+
+    .list{
+      margin-top:20px;
+      display:grid;
+      gap:14px;
+    }
+
+    .list-item{
+      background:#0a0a0a;
+      border-left:4px solid #ffd700;
+      padding:16px 20px;
+      border-radius:10px;
+      color:#d6d6d6;
+    }
+
+    .highlight{
+      color:#ffd700;
+      font-weight:bold;
+    }
+
+    footer{
+      margin-top:70px;
+      text-align:center;
+      color:#777;
+      font-size:0.95rem;
+    }
+
+    @media(max-width:1000px){
+
+      .wiki-layout{
+        grid-template-columns:1fr;
+      }
+
+      .infobox{
+        position:relative;
+        top:0;
+      }
+
+      .page-title{
+        font-size:2.7rem;
+      }
+
+      .main-content{
+        padding:35px;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="wiki-layout">
+
+      <!-- INFOBOX -->
+
+      <aside class="infobox">
+
+        <div class="infobox-header">
+          President
+        </div>
+
+        <img src="pos.png" alt="Kelvin Stazzland" class="profile-image">
+
+        <div class="info-section">
+
+          <div class="info-item">
+            <div class="info-label">Name</div>
+            <div class="info-value">Kelvin Stazzland</div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-label">Title</div>
+            <div class="info-value">President of Stazzeria</div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-label">Also Known As</div>
+            <div class="info-value">Stazzboi • “The Khamelion”</div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-label">Position Type</div>
+            <div class="info-value">Supreme Executive Authority</div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-label">Affiliation</div>
+            <div class="info-value">Stazzeria</div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-label">Status</div>
+            <div class="info-value">Current President</div>
+          </div>
+
+        </div>
+
+      </aside>
+
+      <!-- MAIN CONTENT -->
+
+      <main class="main-content">
+
+        <h1 class="page-title">President of Stazzeria</h1>
+
+        <div class="subtitle">
+          Supreme Leadership Authority of the Stazzerian NATION
+        </div>
+
+        <p class="lead">
+          The <span class="highlight">President of Stazzeria</span> is the
+          head leader and central figure of
+          <span class="highlight">Stazzeria</span> — a sovereign
+          <span class="highlight">NATION</span> and collective built around
+          the Stazzerian identity, culture, and ideals.
+        </p>
+
+        <section class="section">
+
+          <h2>Overview</h2>
+
+          <p>
+            The role combines elements of national leadership,
+            creative direction, public representation,
+            cultural influence, and authority.
+          </p>
+
+          <p>
+            The President functions as the highest leadership office
+            within the Stazzerian structure and serves as the
+            primary representative of the Stazz Universe.
+          </p>
+
+        </section>
+
+        <section class="section">
+
+          <h2>Current President</h2>
+
+          <p>
+            The current President is
+            <span class="highlight">Kelvin Stazzland</span>,
+            also known as
+            <span class="highlight">Stazzboi</span>
+            and
+            <span class="highlight">“The Khamelion.”</span>
+          </p>
+
+        </section>
+
+        <section class="section">
+
+          <h2>Role Within Stazzeria</h2>
+
+          <p>
+            Unlike a traditional political president,
+            the President of Stazzeria operates as:
+          </p>
+
+          <div class="list">
+
+            <div class="list-item">
+              The leader of a digital NATION and movement
+            </div>
+
+            <div class="list-item">
+              The primary display of Stazzerian culture and symbolism
+            </div>
+
+            <div class="list-item">
+              The executive authority of the Stazz Universe
+            </div>
+
+            <div class="list-item">
+              The public face of the Stazzerian collective
+            </div>
+
+          </div>
+
+        </section>
+
+        <section class="section">
+
+          <h2>Responsibilities</h2>
+
+          <div class="list">
+
+            <div class="list-item">
+              Stazzerian identity and expansion
+            </div>
+
+            <div class="list-item">
+              Leadership structure
+            </div>
+
+            <div class="list-item">
+              Media and creative projects
+            </div>
+
+            <div class="list-item">
+              National symbolism
+            </div>
+
+            <div class="list-item">
+              Lore and historical canon
+            </div>
+
+            <div class="list-item">
+              Public representation of Stazzeria
+            </div>
+
+          </div>
+
+        </section>
+
+        <section class="section">
+
+          <h2>Authority</h2>
+
+          <p>
+            The President of Stazzeria serves as the supreme leader,
+            preserver, and representative of the
+            Stazzerian NATION and collective.
+          </p>
+
+        </section>
+
+        <footer>
+          STAZZERIA WIKI • PRESIDENCY OF STAZZERIA
+        </footer>
+
+      </main>
+
+    </div>
+
+  </div>
+
+</body>
+</html>
