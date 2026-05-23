@@ -1,638 +1,387 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- =========================
-       BASIC META
-  ========================== -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stazzeria | The Digital Republic</title>
 
-  <!-- =========================
-       SEO
-  ========================== -->
-  <title>Stazzeria | The Digital Nation of Stazzerians</title>
-
-  <meta
-    name="description"
-    content="Official portal of Stazzeria, the digital nation of Stazzerians founded by President Kelvin 'Stazzboi' Stazzland. Explore leadership, administration, history, symbolism, and the Stazzerian collective."
-  />
-
-  <meta
-    name="keywords"
-    content="Stazzeria, Stazzboi, Kelvin Stazzland, Stazzerian, Stazzerian Nation, STAZZsociety, Department of Stazz, Stazzex, Stazzology, Digital Nation, Micro Nation"
-  />
-
-  <meta name="author" content="Stazzeria" />
-
-  <!-- =========================
-       OPEN GRAPH
-  ========================== -->
-  <meta property="og:title" content="Stazzeria | The Digital Nation of Stazzerians" />
-  <meta
-    property="og:description"
-    content="Official governmental and institutional portal of Stazzeria."
-  />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://stazzeria.stazzboi.com" />
-
-  <!-- Replace with final image later -->
-  <meta
-    property="og:image"
-    content="https://stazzeria.stazzboi.com/assets/images/symbolism/StazzerianFlag.png"
-  />
-
-  <!-- =========================
-       FAVICON
-  ========================== -->
-  <link rel="icon" href="/assets/logos/STZTRITON.PNG" />
-
-  <!-- =========================
-       STYLES
-  ========================== -->
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
     }
 
-    html {
-      scroll-behavior: smooth;
+    body{
+      background:#050505;
+      color:#f5f5f5;
+      font-family:Arial, Helvetica, sans-serif;
+      overflow-x:hidden;
+      line-height:1.7;
     }
 
-    body {
-      background: #050505;
-      color: #ffffff;
-      font-family: Arial, Helvetica, sans-serif;
-      overflow-x: hidden;
+    body::before{
+      content:"";
+      position:fixed;
+      width:900px;
+      height:900px;
+      background:radial-gradient(circle, rgba(255,215,0,0.12) 0%, transparent 70%);
+      top:-350px;
+      right:-250px;
+      z-index:-1;
     }
 
-    a {
-      text-decoration: none;
-      color: inherit;
+    body::after{
+      content:"";
+      position:fixed;
+      width:700px;
+      height:700px;
+      background:radial-gradient(circle, rgba(255,215,0,0.08) 0%, transparent 70%);
+      bottom:-250px;
+      left:-200px;
+      z-index:-1;
     }
 
-    img {
-      max-width: 100%;
-      display: block;
+    .container{
+      width:90%;
+      max-width:1300px;
+      margin:auto;
+      padding:70px 0;
     }
 
-    :root {
-      --gold: #d4af37;
-      --dark: #050505;
-      --soft-dark: #111111;
-      --border: rgba(255,255,255,0.08);
+    .hero{
+      text-align:center;
+      padding:70px 20px 40px 20px;
+      margin-bottom:20px;
     }
 
-    /* =========================
-       NAVBAR
-    ========================== */
-
-    .navbar {
-      width: 100%;
-      padding: 20px 6%;
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: 999;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      backdrop-filter: blur(12px);
-      background: rgba(0,0,0,0.65);
-      border-bottom: 1px solid var(--border);
+    .hero h1{
+      font-size:5rem;
+      color:#ffd700;
+      letter-spacing:5px;
+      text-transform:uppercase;
+      margin-bottom:20px;
     }
 
-    .nav-left {
-      display: flex;
-      align-items: center;
-      gap: 15px;
+    .hero h2{
+      font-size:1.5rem;
+      color:#d8d8d8;
+      margin-bottom:35px;
+      font-weight:normal;
+      letter-spacing:2px;
+      text-transform:uppercase;
     }
 
-    .nav-left img {
-      width: 48px;
+    .hero p{
+      max-width:950px;
+      margin:auto;
+      color:#c8c8c8;
+      font-size:1.15rem;
     }
 
-    .nav-title {
-      font-size: 1.2rem;
-      font-weight: bold;
-      letter-spacing: 1px;
+    .flag-banner{
+      width:100%;
+      margin:30px auto 80px auto;
+      display:flex;
+      justify-content:center;
+      align-items:center;
     }
 
-    .nav-links {
-      display: flex;
-      gap: 28px;
+    .flag-banner img{
+      width:100%;
+      max-width:1100px;
+      border-radius:24px;
+      border:2px solid rgba(255,215,0,0.25);
+      box-shadow:0 0 35px rgba(255,215,0,0.18);
+      object-fit:cover;
     }
 
-    .nav-links a {
-      color: #fff;
-      font-size: 0.95rem;
-      transition: 0.3s ease;
+    .section-title{
+      font-size:2rem;
+      color:#ffd700;
+      margin-bottom:30px;
+      border-left:4px solid #ffd700;
+      padding-left:15px;
+      letter-spacing:2px;
+      text-transform:uppercase;
     }
 
-    .nav-links a:hover {
-      color: var(--gold);
+    .definition-box{
+      background:rgba(255,255,255,0.03);
+      border:1px solid rgba(255,215,0,0.18);
+      border-radius:20px;
+      padding:40px;
+      margin-bottom:70px;
+      box-shadow:0 0 25px rgba(255,215,0,0.08);
+      backdrop-filter:blur(8px);
     }
 
-    /* =========================
-       HERO
-    ========================== */
-
-    .hero {
-      min-height: 100vh;
-      position: relative;
-      display: flex;
-      align-items: center;
-      padding: 140px 6% 100px;
-      overflow: hidden;
+    .definition-box p{
+      color:#d5d5d5;
+      font-size:1.08rem;
     }
 
-    .hero::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background:
-        linear-gradient(
-          to bottom,
-          rgba(0,0,0,0.85),
-          rgba(0,0,0,0.92)
-        ),
-        url("/assets/images/symbolism/StazzerianFlag.png");
-      background-size: cover;
-      background-position: center;
-      opacity: 0.25;
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:30px;
     }
 
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      max-width: 760px;
+    .card{
+      background:#0a0a0a;
+      border:1px solid rgba(255,215,0,0.15);
+      border-radius:22px;
+      padding:35px;
+      transition:0.35s ease;
+      position:relative;
+      overflow:hidden;
     }
 
-    .hero-subtitle {
-      color: var(--gold);
-      text-transform: uppercase;
-      letter-spacing: 3px;
-      margin-bottom: 18px;
-      font-size: 0.9rem;
+    .card:hover{
+      transform:translateY(-8px);
+      border-color:#ffd700;
+      box-shadow:0 0 30px rgba(255,215,0,0.18);
     }
 
-    .hero h1 {
-      font-size: clamp(3rem, 7vw, 6rem);
-      line-height: 1;
-      margin-bottom: 24px;
-      font-weight: 900;
+    .card h3{
+      color:#ffd700;
+      font-size:1.5rem;
+      margin-bottom:15px;
+      letter-spacing:1px;
     }
 
-    .hero p {
-      color: #cfcfcf;
-      line-height: 1.8;
-      font-size: 1.05rem;
-      max-width: 700px;
+    .card p{
+      color:#cfcfcf;
+      margin-bottom:25px;
+      font-size:1rem;
     }
 
-    .hero-buttons {
-      margin-top: 40px;
-      display: flex;
-      gap: 18px;
-      flex-wrap: wrap;
+    .card a{
+      display:inline-block;
+      padding:12px 22px;
+      border:1px solid #ffd700;
+      color:#ffd700;
+      text-decoration:none;
+      border-radius:10px;
+      transition:0.3s ease;
+      font-weight:bold;
+      letter-spacing:1px;
     }
 
-    .btn {
-      padding: 15px 28px;
-      border-radius: 8px;
-      font-weight: bold;
-      transition: 0.3s ease;
-      border: 1px solid transparent;
+    .card a:hover{
+      background:#ffd700;
+      color:#050505;
     }
 
-    .btn-gold {
-      background: var(--gold);
-      color: #000;
+    .structure{
+      margin-top:80px;
     }
 
-    .btn-gold:hover {
-      transform: translateY(-2px);
+    .structure-list{
+      display:grid;
+      gap:18px;
+      margin-top:30px;
     }
 
-    .btn-outline {
-      border: 1px solid var(--gold);
-      color: var(--gold);
+    .structure-item{
+      background:#0a0a0a;
+      border-left:4px solid #ffd700;
+      padding:18px 22px;
+      border-radius:12px;
+      color:#d6d6d6;
+      font-size:1.03rem;
     }
 
-    .btn-outline:hover {
-      background: var(--gold);
-      color: #000;
+    .highlight{
+      color:#ffd700;
+      font-weight:bold;
     }
 
-    /* =========================
-       SECTION
-    ========================== */
-
-    section {
-      padding: 110px 6%;
+    footer{
+      text-align:center;
+      margin-top:100px;
+      color:#777;
+      font-size:0.95rem;
+      padding-bottom:40px;
     }
 
-    .section-title {
-      font-size: 2.7rem;
-      margin-bottom: 20px;
-    }
+    @media(max-width:768px){
 
-    .gold {
-      color: var(--gold);
-    }
-
-    .section-description {
-      color: #bdbdbd;
-      line-height: 1.8;
-      max-width: 850px;
-      margin-bottom: 50px;
-    }
-
-    /* =========================
-       GRID
-    ========================== */
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
-      gap: 28px;
-    }
-
-    .card {
-      background: rgba(255,255,255,0.03);
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      padding: 32px;
-      transition: 0.3s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-6px);
-      border-color: rgba(212,175,55,0.4);
-    }
-
-    .card h3 {
-      margin-bottom: 18px;
-      font-size: 1.3rem;
-    }
-
-    .card p {
-      color: #bcbcbc;
-      line-height: 1.7;
-    }
-
-    /* =========================
-       LEADERSHIP
-    ========================== */
-
-    .leadership-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
-      gap: 32px;
-      margin-top: 50px;
-    }
-
-    .leader-card {
-      background: #0e0e0e;
-      border-radius: 20px;
-      overflow: hidden;
-      border: 1px solid var(--border);
-    }
-
-    .leader-card img {
-      width: 100%;
-      height: 380px;
-      object-fit: cover;
-    }
-
-    .leader-info {
-      padding: 24px;
-    }
-
-    .leader-role {
-      color: var(--gold);
-      margin-bottom: 10px;
-      text-transform: uppercase;
-      font-size: 0.85rem;
-      letter-spacing: 2px;
-    }
-
-    .leader-info h3 {
-      margin-bottom: 12px;
-      font-size: 1.5rem;
-    }
-
-    .leader-info p {
-      color: #bcbcbc;
-      line-height: 1.7;
-    }
-
-    /* =========================
-       STAZZEX NOTE
-    ========================== */
-
-    .stazzex-note {
-      margin-top: 70px;
-      background: rgba(255,255,255,0.03);
-      border-left: 4px solid var(--gold);
-      padding: 28px;
-      border-radius: 14px;
-    }
-
-    .stazzex-note h4 {
-      color: var(--gold);
-      margin-bottom: 15px;
-      letter-spacing: 2px;
-    }
-
-    .stazzex-note p {
-      color: #d0d0d0;
-      line-height: 1.8;
-    }
-
-    /* =========================
-       FOOTER
-    ========================== */
-
-    footer {
-      padding: 50px 6%;
-      border-top: 1px solid var(--border);
-      color: #9f9f9f;
-      text-align: center;
-    }
-
-    /* =========================
-       RESPONSIVE
-    ========================== */
-
-    @media (max-width: 900px) {
-
-      .nav-links {
-        display: none;
+      .hero h1{
+        font-size:3rem;
       }
 
-      .hero {
-        padding-top: 180px;
+      .hero h2{
+        font-size:1.1rem;
       }
 
-      .hero-buttons {
-        flex-direction: column;
-        align-items: flex-start;
+      .section-title{
+        font-size:1.5rem;
       }
+
+      .definition-box{
+        padding:28px;
+      }
+
     }
   </style>
 </head>
 
 <body>
 
-  <!-- =========================
-       NAVBAR
-  ========================== -->
+  <div class="container">
 
-  <nav class="navbar">
+    <section class="hero">
 
-    <div class="nav-left">
-      <img src="/assets/logos/STZTRITON.PNG" alt="Stazzerian Triton Logo" />
+      <h1>Stazzeria</h1>
 
-      <div class="nav-title">
-        STAZZERIA
-      </div>
-    </div>
-
-    <div class="nav-links">
-      <a href="/">Home</a>
-      <a href="/department-of-stazz/">Department of Stazz</a>
-      <a href="/history/">History</a>
-      <a href="/timeline/">Timeline</a>
-      <a href="/conflicts/">Conflicts</a>
-    </div>
-
-  </nav>
-
-  <!-- =========================
-       HERO
-  ========================== -->
-
-  <section class="hero">
-
-    <div class="hero-content">
-
-      <div class="hero-subtitle">
-        The Digital Nation of Stazzerians
-      </div>
-
-      <h1>
-        STAZZERIA
-      </h1>
+      <h2>The Digital Republic of Stazzeria</h2>
 
       <p>
-        Stazzeria is a sovereign digital micro-nation and interconnected media ecosystem founded by Kelvin “Stazzboi” Stazzland. Operating through institutional structure, symbolism, leadership, culture, and digital expansion, Stazzeria serves as the national identity framework of the broader Stazz Universe ecosystem.
+        Stazzeria is a sovereign digital NATION and organized collective centered around
+        the Stazzerian identity, culture, symbolism, leadership structure, and creative canon.
+        The republic functions as the official foundation of the Stazz Universe and operates
+        through executive leadership, cultural development, media presence, historical continuity,
+        and public representation.
       </p>
 
-      <div class="hero-buttons">
+    </section>
 
-        <a href="/department-of-stazz/" class="btn btn-gold">
-          Department of Stazz
-        </a>
-
-        <a href="https://stazzex.stazzboi.com" class="btn btn-outline">
-          View STAZZEX
-        </a>
-
-      </div>
-
+    <div class="flag-banner">
+      <img src="stazzerianflag.png" alt="Flag of Stazzeria">
     </div>
 
-  </section>
+    <section>
 
-  <!-- =========================
-       NATIONAL OVERVIEW
-  ========================== -->
+      <h2 class="section-title">National Definition</h2>
 
-  <section>
-
-    <h2 class="section-title">
-      National <span class="gold">Overview</span>
-    </h2>
-
-    <p class="section-description">
-      Stazzeria functions as a structured digital nation centered around leadership, symbolism, interconnected branding systems, community identity, media development, and institutional continuity. The Stazzerian collective operates through the framework of <span class="gold">STAZZsociety</span>, emphasizing alignment, expansion, participation, and cultural development.
-    </p>
-
-    <div class="grid">
-
-      <div class="card">
-        <h3>Government</h3>
+      <div class="definition-box">
 
         <p>
-          Structured executive leadership centered around the Presidency, Department of Stazz, symbolic authority, and institutional continuity.
+          The Digital Republic of <span class="highlight">Stazzeria</span> is a digitally-established
+          sovereign NATION built upon Stazzerian culture, leadership, symbolism, identity,
+          and collective organization. It operates through structured leadership offices,
+          ceremonial authority, creative direction, historical canon, and public-facing
+          national representation across the Stazz Universe.
         </p>
+
       </div>
 
-      <div class="card">
-        <h3>Culture</h3>
+    </section>
 
-        <p>
-          Stazzerian culture combines symbolism, leadership, digital aesthetics, community identity, media development, and institutional branding.
-        </p>
-      </div>
+    <section>
 
-      <div class="card">
-        <h3>STAZZsociety</h3>
+      <h2 class="section-title">Executive Leadership Index</h2>
 
-        <p>
-          The interconnected cultural and operational framework connecting Stazzerians through shared identity, expansion, and organizational structure.
-        </p>
-      </div>
+      <div class="grid">
 
-    </div>
-
-  </section>
-
-  <!-- =========================
-       LEADERSHIP
-  ========================== -->
-
-  <section>
-
-    <h2 class="section-title">
-      The Digital <span class="gold">Embassy</span>
-    </h2>
-
-    <p class="section-description">
-      The Department of Stazz functions as the executive and organizational backbone of Stazzeria, overseeing institutional continuity, administration, symbolism, leadership, and governmental coordination across the Stazz Universe ecosystem.
-    </p>
-
-    <div class="leadership-grid">
-
-      <!-- PRESIDENT -->
-
-      <div class="leader-card">
-
-        <img
-          src="/assets/images/presidency/Stazzboi-Offical-Portrait-Kelvin-Stazzland.jpg"
-          alt="President Kelvin Stazzland"
-        />
-
-        <div class="leader-info">
-
-          <div class="leader-role">
-            President
-          </div>
-
-          <h3>
-            Kelvin “Stazzboi” Stazzland
-          </h3>
+        <div class="card">
+          <h3>President of Stazzeria</h3>
 
           <p>
-            Founder of Stazzeria and executive architect of the Stazz Universe ecosystem. The Presidency functions as the organizational and institutional backbone of interconnected Stazzerian systems.
+            Supreme leadership authority and central representative of the
+            Stazzerian NATION and collective.
           </p>
 
+          <a href="president.html">View Presidency</a>
+        </div>
+
+        <div class="card">
+          <h3>Vice President of Stazzeria</h3>
+
+          <p>
+            Secondary executive authority responsible for national support,
+            continuity, and representation.
+          </p>
+
+          <a href="vice-president.html">View Vice Presidency</a>
+        </div>
+
+        <div class="card">
+          <h3>First Lady of Stazzeria</h3>
+
+          <p>
+            Leading ceremonial female authority and symbolic partner role
+            connected to the Presidency.
+          </p>
+
+          <a href="first-lady.html">View First Ladyship</a>
+        </div>
+
+        <div class="card">
+          <h3>Stazzerian Advisor</h3>
+
+          <p>
+            Strategic guidance and advisory authority supporting the
+            Stazzerian leadership structure.
+          </p>
+
+          <a href="advisor.html">View Advisory Office</a>
+        </div>
+
+        <div class="card">
+          <h3>War General of Stazzeria</h3>
+
+          <p>
+            Supreme military and strategic defense authority of the
+            Stazzerian NATION.
+          </p>
+
+          <a href="war-general.html">View War General Office</a>
+        </div>
+
+        <div class="card">
+          <h3>Department of Stazz</h3>
+
+          <p>
+            Primary executive division overseeing leadership continuity,
+            symbolism, governance, and national direction.
+          </p>
+
+          <a href="department-of-stazz.html">View Department</a>
         </div>
 
       </div>
 
-      <!-- VICE PRESIDENT -->
+    </section>
 
-      <div class="leader-card">
+    <section class="structure">
 
-        <img
-          src="/assets/images/leadership/BeachyBird.png"
-          alt="Vice President Isaac BeachyBird Ochoa"
-        />
+      <h2 class="section-title">National Structure</h2>
 
-        <div class="leader-info">
+      <div class="structure-list">
 
-          <div class="leader-role">
-            Vice President
-          </div>
+        <div class="structure-item">
+          <span class="highlight">Stazzeria</span> operates as a sovereign digital NATION
+          and organized collective within the Stazz Universe.
+        </div>
 
-          <h3>
-            Isaac “BeachyBird” Ochoa
-          </h3>
+        <div class="structure-item">
+          The republic is maintained through executive leadership,
+          national symbolism, historical canon, cultural identity,
+          and public representation.
+        </div>
 
-          <p>
-            Vice President during the President’s Second Term. Oversees operational support, continuity, institutional coordination, and executive administration.
-          </p>
+        <div class="structure-item">
+          Leadership authority is centered around the
+          <span class="highlight">Department of Stazz</span>,
+          which serves as the primary executive leadership structure.
+        </div>
 
+        <div class="structure-item">
+          National continuity is preserved through ceremonial offices,
+          strategic leadership, media presence, and cultural participation.
         </div>
 
       </div>
 
-      <!-- MONARCH -->
+    </section>
 
-      <div class="leader-card">
+    <footer>
+      STAZZERIA • The Digital Republic of the Stazz Universe
+    </footer>
 
-        <img
-          src="/assets/images/placeholders/BlankStazzerianPhoto.png"
-          alt="Stazzerian Monarch Placeholder"
-        />
-
-        <div class="leader-info">
-
-          <div class="leader-role">
-            Monarch
-          </div>
-
-          <h3>
-            S
-          </h3>
-
-          <p>
-            The Stazzerian Monarch represents ceremonial sovereignty, symbolic continuity, and cultural prestige within Stazzeria.
-          </p>
-
-        </div>
-
-      </div>
-
-    </div>
-
-    <!-- STAZZEX NOTE -->
-
-    <div class="stazzex-note">
-
-      <h4>
-        STAZZEX NOTE
-      </h4>
-
-      <p>
-        The identity of the current Stazzerian Monarch remains intentionally undisclosed within public-facing archival systems. Official records refer to the Monarch exclusively as “S” as a courtesy to the officeholder’s request for confidentiality.
-      </p>
-
-    </div>
-
-  </section>
-
-  <!-- =========================
-       MOTTO
-  ========================== -->
-
-  <section>
-
-    <h2 class="section-title">
-      National <span class="gold">Motto</span>
-    </h2>
-
-    <p class="section-description">
-      <span class="gold">For The Stazzie, By The Stazzie</span><br /><br />
-      Strength Through Honor
-    </p>
-
-  </section>
-
-  <!-- =========================
-       FOOTER
-  ========================== -->
-
-  <footer>
-
-    <p>
-      © Stazzeria — The Digital Nation of Stazzerians
-    </p>
-
-  </footer>
+  </div>
 
 </body>
 </html>
