@@ -31,12 +31,24 @@ jobs:
           copy_asset "087C0F04-E3E0-4DFA-B7BE-0B34AF6A401C.png"
           copy_asset "EB8F07D8-7476-4969-9601-9A7B1CD9C37A.png"
           copy_asset "475713E5-1F77-400C-ACE3-FA15A93B2738.png"
+      - name: Point image references at local assets
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          p=Path("index.html")
+          html=p.read_text()
+          html=html.replace('https://stazzboi.com/Stazzeria/stztriton.png','/Stazzeria/stztriton.png')
+          for asset in ('1EB1284A-2FF3-4ABE-8E8E-CA8880B5CB2A.png','1B2A34AD-72EB-4FBD-AC15-D99596AB9592.png','BA01FC8B-C1E6-43C7-875E-D27CAAB0B9CE.png','087C0F04-E3E0-4DFA-B7BE-0B34AF6A401C.png','EB8F07D8-7476-4969-9601-9A7B1CD9C37A.png','475713E5-1F77-400C-ACE3-FA15A93B2738.png'):
+              html=html.replace('https://stazzboi.com/'+asset,'/'+asset)
+          p.write_text(html)
+          PY
       - name: Commit copied assets
         shell: bash
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -- Stazzeria/stztriton.png *.png
+          git add -- index.html Stazzeria/stztriton.png *.png
           if ! git diff --cached --quiet; then
             git commit -m "Copy deployed Stazzeria image assets from Stazzboi"
             git push
