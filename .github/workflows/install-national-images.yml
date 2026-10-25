@@ -1,0 +1,30 @@
+name: Install approved national images
+on:
+  push:
+    paths:
+      - '.github/workflows/install-national-images.yml'
+      - 'Stazzeria_11_Approved_National_Designs.zip'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  install:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Extract approved images
+        run: |
+          mkdir -p assets/national
+          unzip -o -j Stazzeria_11_Approved_National_Designs.zip '*.png' -d assets/national/
+          test "$(find assets/national -maxdepth 1 -name '*.png' | wc -l)" -eq 11
+      - name: Commit extracted images
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/national
+          if ! git diff --cached --quiet; then
+            git commit -m "Install 11 approved Stazzerian national image assets"
+            git push
+          fi
